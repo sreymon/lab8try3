@@ -16,8 +16,6 @@ const esriSat = L.tileLayer(
   { attribution: "Tiles © Esri" }
 );
 
-
-// cccccccccc
 // -----------------------------------------------------
 // PART 1 - Load GeoJSON
 // -----------------------------------------------------
@@ -94,7 +92,7 @@ function loadStations(url) {
     .catch(err => console.error("Error loading GeoJSON:", err));
 }
 
-loadStations(stationsURL);
+
 
 
 // -----------------------------------------------------
@@ -124,6 +122,13 @@ function fetchClimateData(climateID) {
       // Build HTML conditionally - Q9
       let html = `<p><strong>Date:</strong> ${props.LOCAL_DATE}</p>`;
 
+      if (props.MAX_TEMPERATURE != null) {
+        html += `<p><strong>Max Temp:</strong> ${props.MAX_TEMPERATURE} °C</p>`;
+      }
+      if (props.MIN_TEMPERATURE != null) {
+        html += `<p><strong>Min Temp:</strong> ${props.MIN_TEMPERATURE} °C</p>`;
+      }
+      
       if (props.MEAN_TEMPERATURE !== null) {
         html += `<p><strong>Mean Temp:</strong> ${props.MEAN_TEMPERATURE} &deg;C</p>`;
       }
@@ -176,10 +181,6 @@ legend.onAdd = function (map) {
 legend.addTo(map);
 
 
-// -----------------------------------------------------
-// Q1 Answer
-// ----------------------------------------------------- 
+loadStations(stationsURL);
 
-// .then() executes when a Promise resolves successfully and receives its result.
-// .catch() executes when the Promise fails anywhere in the chain and handles errors.
 
