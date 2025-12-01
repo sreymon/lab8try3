@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab 8 – Climate Data Web Map</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <!-- Leaflet MarkerCluster CSS -->
+  <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+  />
+  <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+<body>
+  <header>
+    <h1>Lab 8: APIs and Leaflet Methods</h1>
+    <p>Exploring Environment Canada’s Climate Daily API</p>
+  </header>
+
+  <main>
+    <div id="map"></div>
+    <section id="info-panel">
+      <h2>Station Climate Information</h2>
+      <p id="station-name">Click a station to view its climate data.</p>
+      <div id="climate-data"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created for GEOG 464 – Programming for Geospatial Technologies, Cameron Brubacher, 2025</p>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  ></script>
+
+  <!-- Leaflet MarkerCluster JS -->
+  <script 
+    src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js">
+  </script>
+
+  <!-- Custom Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>
